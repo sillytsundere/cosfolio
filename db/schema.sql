@@ -1,0 +1,8 @@
+-- DROP DATABASE
+DROP DATABASE IF EXISTS cosplay_db;
+
+-- CREATE DATABASE
+CREATE DATABASE cosplay_db;
+
+-- USE DATABASE
+USE cosplay_db;

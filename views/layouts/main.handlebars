@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You Cosplayed You'self</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to the Four Seasons of Con-Crunch</h1>
+  </header>
+  <nav>
+    <a href="/">Home</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
+  </nav>
+  <main>
+    <aside>
+      <h2>Enjoy the cosplays!</h2>
+    </aside>
+    <div>
+      {{{body}}}
+      <!--If not logged in view cosplays but not the users-->
+      {{!-- If logged in view users and their most recent cosplays --}}
+    </div>
+  </main>
+  {{#if loggedIn}}
+  <!--Add a "View profile" button-->
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
