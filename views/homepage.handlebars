@@ -1,0 +1,22 @@
+{{{#if logged_in}}}
+<div>
+    {{#each cosplay as |cosplay|}}
+    <section class="card">
+  <a href="/cosplay/{{id}}">
+    <header>{{cosplay.name}}</header>
+    <p>{{cosplay.username}}</p>
+    <p>{{cosplay.description}}</p>
+  </a>
+</section>
+    {{/each}}
+{{else}}
+{{#each cosplay as |cosplay|}}
+    <section class="card">
+  <a href="/login">Login</a>
+    <header>{{cosplay.name}}</header>
+    <p>{{cosplay.description}}</p>
+  </a>
+</section>
+{{/each}}
+</div>
+{{/if}}

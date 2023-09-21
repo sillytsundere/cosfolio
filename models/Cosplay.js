@@ -19,10 +19,14 @@ Cosplay.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    user_id:{
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    user_id: {
       type: DataTypes.INTEGER,
-      references:{model:'user', key: 'id'}
-    }
+      references: { model: "user", key: "id" },
+    },
   },
   {
     sequelize,
