@@ -18,7 +18,7 @@ const cosplaydata = [
   },
 ];
 
-const seedUsers = () => User.bulkCreate(userdata);
+const seedUsers = () => User.bulkCreate(userdata, { individualHooks: true });
 
 const seedCosplay = () => Cosplay.bulkCreate(cosplaydata);
 

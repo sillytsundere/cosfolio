@@ -28,4 +28,24 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+router.get("/profile", withAuth, async (req, res) => {
+  try {
+    const userCosplays = await Cosplay.findAll({
+      where: { user: req.session.user },
+    });
+
+    const cosplays = userCosplays.map((project) =>
+      project.get({ plain: true })
+    );
+
+    res.render("profile", {
+      cosplays,
+
+      //logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
