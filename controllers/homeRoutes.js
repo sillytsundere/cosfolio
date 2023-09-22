@@ -5,18 +5,9 @@ const withAuth = require("../utils/auth");
 router.get("/", async (req, res) => {
   //if user is not logged in none of the following code runs, withAuth-user sent to login page
   try {
-    // const cosplayData = await Cosplay.findAll();
+    const cosplayData = await Cosplay.findAll();
 
-    // const cosplays = cosplayData.map((project) => project.get({ plain: true }));
-
-    const cosplays = [
-      {
-        name: "Batman",
-        description: "The Darkest Knight",
-        username: "armordude",
-        user_id: "2",
-      },
-    ];
+    const cosplays = cosplayData.map((project) => project.get({ plain: true }));
 
     res.render("homepage", {
       cosplays,
