@@ -1,6 +1,6 @@
-{{{#if logged_in}}}
 <div>
-    {{#each cosplay as |cosplay|}}
+{{#if logged_in}}
+    {{#each cosplays as |cosplay|}}
     <section class="card">
   <a href="/cosplay/{{id}}">
     <header>{{cosplay.name}}</header>
@@ -10,13 +10,13 @@
 </section>
     {{/each}}
 {{else}}
-{{#each cosplay as |cosplay|}}
+{{#each cosplays as |cosplay|}}
     <section class="card">
-  <a href="/login">Login</a>
     <header>{{cosplay.name}}</header>
     <p>{{cosplay.description}}</p>
   </a>
 </section>
 {{/each}}
-</div>
+  <a href="/login">Login</a>
 {{/if}}
+</div>
