@@ -1,18 +1,26 @@
-const router = require('express').Router();
-const { User, Cosplay } = require('../models');
-const withAuth = require('../utils/auth');
+const router = require("express").Router();
+const { User, Cosplay } = require("../models");
+const withAuth = require("../utils/auth");
 
-
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   //if user is not logged in none of the following code runs, withAuth-user sent to login page
   try {
-    const cosplayData = await Cosplay.findAll();
+    // const cosplayData = await Cosplay.findAll();
 
-    const cosplays = cosplayData.map((project) => project.get({ plain: true }));
-    
-    res.render('homepage', {
+    // const cosplays = cosplayData.map((project) => project.get({ plain: true }));
+
+    const cosplays = [
+      {
+        name: "Batman",
+        description: "The Darkest Knight",
+        username: "armordude",
+        user_id: "2",
+      },
+    ];
+
+    res.render("homepage", {
       cosplays,
-      
+
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -20,14 +28,13 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/login', (req, res) => {
-
+router.get("/login", (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/');
+    res.redirect("/");
     return;
   }
 
-  res.render('login');
+  res.render("login");
 });
 
 module.exports = router;
