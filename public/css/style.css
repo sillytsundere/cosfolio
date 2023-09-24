@@ -1,0 +1,20 @@
+.background-color {
+  background-color: #8F3B76;
+}
+.button-color {
+  background-color: #1F306E;
+  color: #ffff;
+}
+.text-color {
+  color: #ffff ;
+}
+.card-style {
+  color: black;
+}
+.banner-color {
+  background-color: #553772;
+}
+h1{
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
