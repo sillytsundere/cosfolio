@@ -7,6 +7,12 @@ const userdata = [
     email: "email@email.com",
     password: "asdf1234",
   },
+
+  {
+    name: "gojosimp",
+    email: "name@name.com",
+    password: "asdf1234",
+  },
 ];
 
 const cosplaydata = [
@@ -15,6 +21,13 @@ const cosplaydata = [
     description: "The Darkest Knight",
     username: "armordude",
     user_id: "1",
+  },
+
+  {
+    name: "Femme Gojo",
+    description: "Hollow Purple",
+    username: "gojosimp",
+    user_id: "2",
   },
 ];
 
