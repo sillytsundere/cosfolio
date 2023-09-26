@@ -19,14 +19,12 @@ const cosplaydata = [
   {
     name: "Batman",
     description: "The Darkest Knight",
-    username: "armordude",
     user_id: "1",
   },
 
   {
     name: "Femme Gojo",
     description: "Hollow Purple",
-    username: "gojosimp",
     user_id: "2",
   },
 ];
