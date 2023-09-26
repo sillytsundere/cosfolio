@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User } = require("../../models");
+const { User, Cosplay } = require("../../models");
 
 // CREATE new user
 router.post("/", async (req, res) => {
@@ -65,4 +65,19 @@ router.post("/logout", (req, res) => {
   }
 });
 
+router.post("/create", async (req, res) => {
+  console.log('hellos scfb');
+  try {
+    const dbCosplayData = await Cosplay.create({
+      name: req.body.name,
+      description: req.body.description,
+      user_id: req.session.user_id,
+    });
+
+      res.redirect("/profile");
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 module.exports = router;

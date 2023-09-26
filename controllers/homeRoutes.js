@@ -29,17 +29,13 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/profile", withAuth, async (req, res) => {
-  console.log('sdlafkjlk');
-  console.log(Cosplay, req.session.user_id);
   try {
     const userCosplays = await Cosplay.findAll({
       where: { user_id: req.session.user_id },
     });
-    console.log('sdlafkjlk');
     const cosplays = userCosplays.map((project) =>
       project.get({ plain: true })
     );
-    console.log('sdlafkjlk');
     res.render("profile", {
       cosplays,
 
@@ -48,6 +44,13 @@ router.get("/profile", withAuth, async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+router.get("/create", withAuth, async (req, res) => {
+  console.log("homerender");
+  res.render("create", {
+    logged_in: req.session.logged_in,
+  });
 });
 
 module.exports = router;
