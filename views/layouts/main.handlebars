@@ -17,8 +17,8 @@
     <div class="inline-flex">
     <button class="btn button-color"><a class="text-decoration-none" href="/">Home</a></button>
     {{#if logged_in}}
-    <button id="logout" class="btn btn-primary">Logout</button>
-    <button  id="profile" class="btn">Profile</button>
+    <button id="logout" class="btn button-color">Logout</button>
+    <button  id="profile" class="btn button-color">Profile</button>
     {{else}}
     <button class="btn button-color"><a class="text-decoration-none" href="/login">Login</a></button>
     {{/if}}
@@ -37,6 +37,7 @@
   {{#if logged_in}}
   <!--Add a "View profile" button-->
   <script src="/js/logout.js"></script>
+  <script src="/js/profile.js"></script>
   {{/if}}
 </body>
 
