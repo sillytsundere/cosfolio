@@ -1,9 +1,11 @@
-<canvas id="my-canvas"></canvas>
-<button  id="create" class="btn button-color">Create A New Post</button>
+<div>
+  <p>Now Viewing Cosplays by {{cosplay.user.name}}</p>
+</div>
 {{#each cosplays as |cosplay|}}
   <section class="card">
   <a href="/cosplay/{{id}}">
     <header>{{cosplay.name}}</header>
+    <p>{{cosplay.user.name}}</p>
     <p>{{cosplay.description}}</p>
   </a>
 </section>
