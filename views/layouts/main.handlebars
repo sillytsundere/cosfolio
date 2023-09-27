@@ -13,7 +13,7 @@
   <header class="banner-color">
     <h1>Cosfolio</h1>
   </header>
-  <nav class="navbar bg-body-tertiary">
+  <nav class="navbar">
     <div class="inline-flex">
     <button class="btn button-color"><a class="text-decoration-none" href="/">Home</a></button>
     {{#if logged_in}}
@@ -25,9 +25,7 @@
     </div>
   </nav>
   <main>
-    <aside>
-      <h2>Enjoy the cosplays!</h2>
-    </aside>
+    
     <div>
       {{{body}}}
       <!--If not logged in view cosplays but not the users-->

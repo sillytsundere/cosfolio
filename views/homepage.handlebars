@@ -1,22 +1,25 @@
-<div>
-{{#if logged_in}}
-    {{#each cosplays as |cosplay|}}
-    <section class="card">
-  <a href="/profile/{{cosplay.user_id}}">
-    <header>{{cosplay.name}}</header>
-    <p>{{cosplay.user.name}}</p>
-    <p>{{cosplay.description}}</p>
-  </a>
-</section>
-    {{/each}}
-{{else}}
-{{#each cosplays as |cosplay|}}
-    <section class="card">
-    <header>{{cosplay.name}}</header>
-    <p>{{cosplay.description}}</p>
-  </a>
-</section>
-{{/each}}
-  <a href="/login">Login</a>
-{{/if}}
+<div class="container content-justify-center">
+  <aside>
+      <h2>Enjoy the cosplays!</h2>
+  </aside>
+  {{#if logged_in}}
+      {{#each cosplays as |cosplay|}}
+      <section class="card card-style mb-3 col-6 p-1">
+    <a href="/profile/{{cosplay.user_id}}">
+      <header>{{cosplay.name}}</header>
+      <p>{{cosplay.user.name}}</p>
+      <p>{{cosplay.description}}</p>
+    </a>
+  </section>
+      {{/each}}
+  {{else}}
+  {{#each cosplays as |cosplay|}}
+      <section class="card card-style mb-3 col-6 p-1">
+      <header>{{cosplay.name}}</header>
+      <p>{{cosplay.description}}</p>
+    </a>
+  </section>
+  {{/each}}
+    <button class="btn button-color"><a class="text-decoration-none" href="/login">Login</a></button>
+  {{/if}}
 </div>
