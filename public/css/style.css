@@ -1,22 +1,38 @@
+h1 {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
 .background-color {
   background-color: #8F3B76;
 }
+
 .button-color {
   background-color: #1F306E;
   color: #ffff;
 }
+
 .text-color {
   color: #ffff ;
 }
+
 .card-style {
   color: black;
 }
+
 .banner-color {
   background-color: #553772;
 }
-h1{
-  text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+.navbar {
+  background-color: gray;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 #my-canvas {

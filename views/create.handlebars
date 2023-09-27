@@ -1,16 +1,18 @@
-<div class="card col-sm-6 mb-3 mb-sm-0 ">
-    <h2 class="card-header" >Tell us about your cosplay</h2>
-    <form class="card-body create-form">
+<div class = "container">
+    <div class="row justify-content-center card card-style col-sm-6 mb-3 mb-sm-0">
+        <h2 class="card-header">Tell us about your cosplay</h2>
+        <form class="card-body create-form">
+            <div class="mb-3">
+            <label class="form-label" for="cosplay-name">Title</label>
+            <input class="form-control" type="text" id="cosplay-name"/>
+        </div>
         <div class="mb-3">
-        <label class="form-label" for="cosplay-name">Title</label>
-        <input class="form-control" type="text" id="cosplay-name"/>
+            <label class="form-label" for="cosplay-description">Description</label>
+            <input type="text" id="cosplay-description" placeholder="tell us about it"/>
+        </div>
+        <div>
+            <button class="button-color btn" type="submit" id="create-post">Create</button>
+        </div>
+        </form>
     </div>
-    <div class="mb-3">
-        <label class="form-label" for="cosplay-description">Description</label>
-        <input type="text" id="cosplay-description" placeholder="tell us about it"/>
-    </div>
-    <div>
-        <button class="button-color btn" type="submit" id="create-post">Create</button>
-    </div>
-    </form>
 </div>
