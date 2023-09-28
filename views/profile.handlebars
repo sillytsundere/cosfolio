@@ -1,12 +1,10 @@
 <div class = "container content-justify-center">
   <canvas id="my-canvas"></canvas>
-  <button  id="create" class="btn button-color">Create A New Post</button>
+  <button  id="create" class="btn button-color mb-3">Create A New Post</button>
   {{#each cosplays as |cosplay|}}
-    <section class="card card-style col-6 mb-1">
-    <a href="/cosplay/{{id}}">
-      <header>{{cosplay.name}}</header>
+    <section class="card card-style col-6 mb-3">
+      <h3>{{cosplay.name}}</h3>
       <p>{{cosplay.description}}</p>
-    </a>
   </section>
   {{/each}}
 </div>

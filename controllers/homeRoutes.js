@@ -61,12 +61,14 @@ router.get("/profile/:id", withAuth, async (req, res) => {
     where: { user_id: req.params.id },
     include: [{ model: User }],
   });
+
   const cosplays = userCosplays.map((project) => project.get({ plain: true }));
 
-  console.log(cosplays);
+  const username = cosplays[0].user.name; 
+
   res.render("viewProfile", {
     cosplays,
-
+    username,
     logged_in: req.session.logged_in,
   });
 });
