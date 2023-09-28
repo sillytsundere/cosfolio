@@ -33,9 +33,23 @@ After closing the MySQL shell, navigate to the main repository in the command li
 
 ## Usage
 
-The deployed site can be viewed [here](https://cosfolio-cbc30e9a9851.herokuapp.com/). The homepage displays various cosplays created by different users of the site. Once a user logs in they can view the usernames of the other users associated with the cosplays on the homepage. In the navbar users, once logged in, can click the Profile button to view the cosplays created by them. Their profile page will also have a 'Create' button they can click to add a new cosplay to their profile. 
+The deployed site can be viewed [here](https://cosfolio-cbc30e9a9851.herokuapp.com/). The homepage displays various cosplays created by different users of the site. Once a user logs in they can view the usernames of the other users associated with the cosplays on the homepage.
+
+![homepage when logged in](./dev-pics/logged-in-homepage.png)
+
+In the navbar users, once logged in, can click the Profile button to view the cosplays created by them.
+
+![profile page](dev-pics/profile.png)
+
+Their profile page will also have a 'Create' button they can click to add a new cosplay to their profile.
+
+![page where users can submit a new cosplay](dev-pics/create-new.png)
 
 ## Credits
+
+Badges sourced from: [Awesome Badges](https://dev.to/envoy_/150-badges-for-github-pnk)
+
+[Props](https://icons8.com/icon/Pe2wpiAIWb3h/props) icon by [Icons8](https://icons8.com)
 
 ### Collaborators
 
@@ -48,9 +62,9 @@ Richard Warden <br>
 Paige Carroll <br>
 -GitHub: [sillytsundere](https://github.com/sillytsundere)<br>
 
-Badges sourced from: [Awesome Badges](https://dev.to/envoy_/150-badges-for-github-pnk)
-
 ## License
+
+MIT License
 
 ## Badges
 
