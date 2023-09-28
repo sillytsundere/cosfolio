@@ -5,11 +5,9 @@
   {{#if logged_in}}
       {{#each cosplays as |cosplay|}}
       <section class="card card-style mb-3 col-6 p-1">
-    <a href="/profile/{{cosplay.user_id}}">
       <header>{{cosplay.name}}</header>
-      <p>{{cosplay.user.name}}</p>
+      <p>Made by <a href="/profile/{{cosplay.user_id}}">{{cosplay.user.name}}</a></p>
       <p>{{cosplay.description}}</p>
-    </a>
   </section>
       {{/each}}
   {{else}}

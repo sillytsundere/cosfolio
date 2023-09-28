@@ -21,6 +21,6 @@ const createFormHandler = async (event) => {
   }
 };
 
-document
-  .querySelector("#create-post")
-  .addEventListener("click", createFormHandler);
+if (document.querySelector("#create-post")) {
+  document.querySelector("#create-post").addEventListener("click", createFormHandler);
+}

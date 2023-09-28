@@ -11,12 +11,15 @@ const loadProfile = async () => {
 
 document.querySelector("#profile").addEventListener("click", loadProfile);
 
-var confettiSettings = { target: "my-canvas" };
-var confetti = new ConfettiGenerator(confettiSettings);
-confetti.render();
+if (document.querySelector('#my-canvas')) {
+  var confettiSettings = { target: "my-canvas" };
+  var confetti = new ConfettiGenerator(confettiSettings);
+  confetti.render();
+  
+  setTimeout(() => {
+    confetti.clear();
+    document.getElementById("my-canvas").remove();
+  }, 3000);
+}
 
-setTimeout(() => {
-  confetti.clear();
-  document.getElementById("my-canvas").remove();
-}, 3000);
 

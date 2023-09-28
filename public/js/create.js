@@ -10,4 +10,6 @@ const loadCreate = async () => {
     }
 };
 
-document.querySelector("#create").addEventListener("click", loadCreate);
+if (document.querySelector("#create")) {
+    document.querySelector("#create").addEventListener("click", loadCreate);
+}
