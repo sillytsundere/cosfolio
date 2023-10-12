@@ -1,10 +1,10 @@
-<div class="container content-justify-center">
+<div class="container">
   <aside>
-      <h2>Enjoy the cosplays!</h2>
+      <h2 class="text-center">Enjoy the cosplays!</h2>
   </aside>
   {{#if logged_in}}
       {{#each cosplays as |cosplay|}}
-      <section class="card card-style mb-3 col-6 p-1">
+      <section class="card card-style mb-3 col-12 col-sm-6 p-1">
       <header>{{cosplay.name}}</header>
       <p>Made by <a href="/profile/{{cosplay.user_id}}">{{cosplay.user.name}}</a></p>
       <p>{{cosplay.description}}</p>
@@ -12,7 +12,7 @@
       {{/each}}
   {{else}}
   {{#each cosplays as |cosplay|}}
-      <section class="card card-style mb-3 col-6 p-1">
+      <section class="card card-style mb-3 col-12 col-sm-6 p-1">
       <header>{{cosplay.name}}</header>
       <p>{{cosplay.description}}</p>
     </a>
