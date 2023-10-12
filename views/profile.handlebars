@@ -1,8 +1,8 @@
-<div class = "container content-justify-center">
+<div class = "container justify-content-center">
   <canvas id="my-canvas"></canvas>
   <button  id="create" class="btn button-color mb-3">Create A New Post</button>
   {{#each cosplays as |cosplay|}}
-    <section class="card card-style col-6 mb-3">
+    <section class="card card-style col-12 col-sm-6 mb-3 p-2">
       <h3>{{cosplay.name}}</h3>
       <p>{{cosplay.description}}</p>
   </section>
